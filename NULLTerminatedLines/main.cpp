@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<Windows.h>
 using namespace std;
 
@@ -40,49 +40,49 @@ void main()
 	//char str[] = { 'H', 'e', 'l', 'l', 'o', '\0'};
 	//char str[] = "Hello";
 	//cout << str << endl;
-	cout << (int)'ÿ' << endl;
+	cout << (int)'Ñ' << endl;
 	const int SIZE = 256;
 	char str[SIZE] = {};
-	cout << "Ââåäèòå ñòðîêó: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ñ€Ð¾ÐºÑƒ: ";
 	//SetConsoleCP(1251);
 	//cin >> str;
 	cin.getline(str, SIZE);
 	//SetConsoleCP(866);
 	cout << str << endl;
-	cout << "Ââåäåííàÿ ñòðîêà èìååò äëèíó " << StringLength(str) << " ñèìâîëîâ" << endl;
-	cout << endl << "Èíâåðñèÿ ðåãèñòðà" << endl;
+	cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð½Ð°Ñ ÑÑ‚Ñ€Ð¾ÐºÐ° Ð¸Ð¼ÐµÐµÑ‚ Ð´Ð»Ð¸Ð½Ñƒ " << StringLength(str) << " ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð²" << endl;
+	cout << endl << "Ð˜Ð½Ð²ÐµÑ€ÑÐ¸Ñ Ñ€ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°" << endl;
 	inverse(str);
 	cout << str << endl;
-	cout << endl << "Óäàëåíèå ëèøíèõ ïðîáåëîâ" << endl;
+	cout << endl << "Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð»Ð¸ÑˆÐ½Ð¸Ñ… Ð¿Ñ€Ð¾Ð±ÐµÐ»Ð¾Ð²" << endl;
 	shrink(str);
 	cout << str << endl;
 	
-	if (is_palindrome(str))cout << endl << "Ýòî ïàëèíäðîì" << endl;
-	else cout << endl << "Ýòî íå ïàëèíäðîì" << endl;
+	if (is_palindrome(str))cout << endl << "Ð­Ñ‚Ð¾ Ð¿Ð°Ð»Ð¸Ð½Ð´Ñ€Ð¾Ð¼" << endl;
+	else cout << endl << "Ð­Ñ‚Ð¾ Ð½Ðµ Ð¿Ð°Ð»Ð¸Ð½Ð´Ñ€Ð¾Ð¼" << endl;
 
 	if (is_int_number(str))
 	{
-		cout << endl << "Ýòî äåñÿòè÷íîå ÷èñëî" << endl;
-		cout << "×èñëîâîå çíà÷åíèå: " << to_int_number(str) << endl;
+		cout << endl << "Ð­Ñ‚Ð¾ Ð´ÐµÑÑÑ‚Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
+		cout << "Ð§Ð¸ÑÐ»Ð¾Ð²Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: " << to_int_number(str) << endl;
 		int a = 5;
 		int b = to_int_number(str) + a;
-		cout << "Ïðîâåðêà: " << to_int_number(str) << " + " << a << " = " << b << endl;
+		cout << "ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ°: " << to_int_number(str) << " + " << a << " = " << b << endl;
 	}
-	else cout << endl << "Ýòî íå äåñÿòè÷íîå ÷èñëî" << endl;
+	else cout << endl << "Ð­Ñ‚Ð¾ Ð½Ðµ Ð´ÐµÑÑÑ‚Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
 
 	if (is_bin_number(str))
 	{
-		cout << endl << "Ýòî äâîè÷íîå ÷èñëî" << endl;
-		cout << "Äåñÿòè÷íîå çíà÷åíèå äâîè÷íîãî ÷èñëà: " << bin_to_dec(str) << endl;
+		cout << endl << "Ð­Ñ‚Ð¾ Ð´Ð²Ð¾Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
+		cout << "Ð”ÐµÑÑÑ‚Ð¸Ñ‡Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð´Ð²Ð¾Ð¸Ñ‡Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°: " << bin_to_dec(str) << endl;
 	}
-	else cout << endl << "Ýòî íå äâîè÷íîå ÷èñëî" << endl;
+	else cout << endl << "Ð­Ñ‚Ð¾ Ð½Ðµ Ð´Ð²Ð¾Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
 
 	if (is_hex_number(str))
 	{
-		cout << endl << "Ýòî øåñòíàäöàòåðè÷íîå ÷èñëî" << endl;
-		cout << "Äåñÿòè÷íîå çíà÷åíèå øåñòíàäöàòåðè÷íîãî ÷èñëà: " << hex_to_dec(str) << endl;
+		cout << endl << "Ð­Ñ‚Ð¾ ÑˆÐµÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÐµÑ€Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
+		cout << "Ð”ÐµÑÑÑ‚Ð¸Ñ‡Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑˆÐµÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÐµÑ€Ð¸Ñ‡Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°: " << hex_to_dec(str) << endl;
 	}
-	else cout << endl << "Ýòî íå øåñòíàäöàòåðè÷íîå ÷èñëî" << endl;
+	else cout << endl << "Ð­Ñ‚Ð¾ Ð½Ðµ ÑˆÐµÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚ÐµÑ€Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << endl;
 
 
 
